@@ -133,8 +133,13 @@ export default function Services() {
 
   return (
     <>
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-hero text-white">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-hero text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-122.webp)' }}
+        />
+        <div className="absolute inset-0 bg-brand-navy/70 pointer-events-none" />
+        <div className="relative max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-brand-gold font-semibold text-sm tracking-widest uppercase">
             Servicii
           </span>
@@ -145,18 +150,18 @@ export default function Services() {
             De la agregate și asfalt până la carburanți — fiecare serviciu
             respectă aceleași principii de calitate și seriozitate.
           </p>
-        </div>
 
-        <div className="mt-10 flex justify-center gap-3 flex-wrap px-4">
-          {services.map((s) => (
-            <a
-              key={s.id}
-              href={`#${s.id}`}
-              className="px-4 py-2 rounded-full bg-white/10 border border-white/10 text-white/70 text-sm hover:bg-white/20 hover:text-white transition-colors"
-            >
-              {s.title}
-            </a>
-          ))}
+          <div className="mt-10 flex justify-center gap-3 flex-wrap px-4">
+            {services.map((s) => (
+              <a
+                key={s.id}
+                href={`#${s.id}`}
+                className="px-4 py-2 rounded-full bg-white/10 border border-white/10 text-white/70 text-sm hover:bg-white/20 hover:text-white transition-colors"
+              >
+                {s.title}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

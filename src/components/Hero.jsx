@@ -44,6 +44,11 @@ export default function Hero() {
 
   return (
     <section ref={ref} className="relative min-h-[90vh] md:min-h-screen bg-gradient-hero overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-44-2.webp)' }}
+      />
+      <div className="absolute inset-0 bg-brand-navy/70 pointer-events-none" />
       <div className="absolute inset-0 bg-grid pointer-events-none" />
 
       <motion.div

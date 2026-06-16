@@ -60,7 +60,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden p-2 -mr-2 text-white"
+            className={`lg:hidden p-2 -mr-2 ${open ? 'text-ink' : 'text-white'}`}
             aria-label="Toggle menu"
           >
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -81,8 +81,8 @@ export default function Navbar() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors text-white hover:bg-white/10 ${
-                    location.pathname === link.to ? 'bg-white/15' : ''
+                  className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors text-ink hover:bg-black/5 ${
+                    location.pathname === link.to ? 'text-brand-navy bg-brand-navy/5' : ''
                   }`}
                 >
                   {link.label}

@@ -19,8 +19,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    items: ['europexpres@yahoo.com'],
-    href: 'mailto:europexpres@yahoo.com',
+    items: ['office@europexpres.ro'],
+    href: 'mailto:office@europexpres.ro',
   },
   {
     icon: MapPin,
@@ -60,8 +60,13 @@ export default function Contact() {
 
   return (
     <>
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-hero text-white">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-hero text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-122.webp)' }}
+        />
+        <div className="absolute inset-0 bg-brand-navy/70 pointer-events-none" />
+        <div className="relative max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-brand-gold font-semibold text-sm tracking-widest uppercase">
             Contact
           </span>

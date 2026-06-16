@@ -110,7 +110,7 @@ export default function About() {
               <div className="relative aspect-[4/3] rounded-2xl border border-black/5 overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: 'url(https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-135.webp)' }}
+          style={{ backgroundImage: 'url(https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-122.webp)' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent pointer-events-none" />
                 <div className="relative h-full flex flex-col items-center justify-end p-8 text-center">

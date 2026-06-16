@@ -57,8 +57,13 @@ export default function About() {
 
   return (
     <>
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-hero text-white">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-hero text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-135.webp)' }}
+        />
+        <div className="absolute inset-0 bg-brand-navy/70 pointer-events-none" />
+        <div className="relative max-w-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-brand-gold font-semibold text-sm tracking-widest uppercase">
             Despre Noi
           </span>
@@ -102,10 +107,15 @@ export default function About() {
             </FadeInSection>
 
             <FadeInSection delay={0.15}>
-              <div className="aspect-[4/3] rounded-2xl bg-gradient-soft border border-black/5 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <p className="text-7xl font-extrabold text-brand-navy/10">1999</p>
-                  <p className="mt-2 text-ink-muted/50 text-sm font-medium">
+              <div className="relative aspect-[4/3] rounded-2xl border border-black/5 overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: 'url(https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-135.webp)' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent pointer-events-none" />
+                <div className="relative h-full flex flex-col items-center justify-end p-8 text-center">
+                  <p className="text-7xl font-extrabold text-white drop-shadow-lg">1999</p>
+                  <p className="mt-2 text-white/90 text-sm font-medium drop-shadow">
                     Anul înființării
                   </p>
                 </div>

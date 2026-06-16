@@ -17,6 +17,7 @@ const services = [
     icon: Wrench,
     title: 'Construcții Drumuri',
     subtitle: 'Infrastructură rutieră și mixturi asfaltice',
+    image: 'https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-44-2.webp',
     description:
       'Executăm lucrări complete de construcție, reabilitare și întreținere a drumurilor. Dispunem de utilaje moderne și o echipă experimentată pentru a livra proiecte la cele mai înalte standarde de calitate.',
     features: [
@@ -31,6 +32,7 @@ const services = [
     icon: Mountain,
     title: 'Carieră Piatră Zlatna',
     subtitle: 'Cribluri, spărturi și agregate minerale',
+    image: 'https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-77.webp',
     description:
       'Exploatăm cariera de piatră de la Zlatna, județul Alba, producând o gamă variată de agregate minerale pentru construcții, infrastructură și industrie.',
     features: [
@@ -45,6 +47,7 @@ const services = [
     icon: Fuel,
     title: 'Benzinării',
     subtitle: 'Distribuție carburanți — Partener Rompetrol',
+    image: 'https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-122.webp',
     description:
       'Operăm un lanț de benzinării în județul Alba, precum și stații mobile de distribuție carburanți. În parteneriat cu Rompetrol, asigurăm combustibil de calitate pentru toate nevoile.',
     features: [
@@ -59,6 +62,7 @@ const services = [
     icon: Grid3X3,
     title: 'Piatră Cubică',
     subtitle: 'Pavaje și amenajări urbane',
+    image: 'https://pub-aeaa58ace55742d3bb88040db3bde314.r2.dev/europa-12.webp',
     description:
       'Furnizăm piatră cubică naturală pentru pavaje, trotuare, piețe publice și amenajări peisagistice. Produsul nostru combină estetica tradițională cu durabilitatea necesară traficului intens.',
     features: [
@@ -111,12 +115,14 @@ function ServiceSection({ service, index }) {
           </div>
 
           <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-soft border border-black/5 flex items-center justify-center">
-              <div className="text-center">
-                <service.icon size={64} className="text-brand-navy/20 mx-auto" />
-                <p className="mt-3 text-ink-muted/50 text-sm font-medium">
-                  {service.title}
-                </p>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-black/5">
+              <div
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${service.image})` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 via-transparent to-transparent pointer-events-none" />
+              <div className="relative h-full flex items-end p-6">
+                <service.icon size={36} className="text-white drop-shadow-lg" />
               </div>
             </div>
           </div>
